@@ -1,0 +1,20 @@
+<?php
+namespace App\Http\Services;
+use Illuminate\Http\Request;
+use DB;
+use App\Http\Requests;
+class HomeServices
+{
+    public function getUploadImage(){
+       $query = DB::table('imges')->get();
+       return $query;
+    }
+
+    /**
+     * ????? 'getNews' ?????????? ??? ?????? ?? ???? ?????? ?? ??????? 'news';
+     */
+    public function getNews(){
+        $query = DB::table('news')->get();
+        return $query;
+    }
+}
